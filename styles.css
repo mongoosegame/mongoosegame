@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Margarine&family=McLaren&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap');
 
 :root,
 [data-theme="default"] {
@@ -102,6 +103,14 @@
     font-family: 'Papyrus', serif;
 }
 
+.funnytext {
+    font-family: 'Playwrite IE', cursive;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    font-weight: bold;
+    color: red;
+    text-shadow: #0000009c 4px 4px 5px;
+}
+
 a:not(.ost a, .navbar a) {
     color: var(--color-link);
     text-decoration: underline solid 2px var(--color-link);
@@ -123,6 +132,29 @@ a:hover:not(.ost a, .navbar a) {
 ::selection {
     color: var(--color-selection-text);
     background-color: var(--color-selection-bg);
+}
+
+.hover:hover {
+    filter: drop-shadow(2px 2px 8px black);
+    animation: scale-easeOutBounce 0.4s forwards;
+    transition: all 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out;
+    filter: contrast(500%);
+    filter: brightness(120%);
+    filter: saturate(400%);
+    box-shadow: 0px 0px 300px black;
+}
+
+#mongoose:hover {
+    rotate: -10deg;
+}
+
+#john:hover {
+    rotate: 10deg;
+}
+
+#jane:hover {
+    rotate: -10deg;
 }
 
 #header-placeholder {

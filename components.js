@@ -4,13 +4,13 @@ function loadHeader() {
     const headerHTML = `
     <div class="top-banner" id="announcement">
         <img src="resources/img/gameicon.jpg" alt="Game Icon">
-        <p>Update 1.1 just released!</p>
+        <p>Our speedrun.com page is now live! Check it out <a target="_blank" rel="noopener noreferrer" href="https://www.speedrun.com/tamg">here</a>!</p>
         <button class="close-banner" onclick="dismissBanner()">X</button>
     </div>
     <div class="navbar comic-sans">
         <div class="left">
             <a href="index.html" class="enabled" id="link-index">Home</a>
-            <a id="link-speedruns">Speedruns (WIP)</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.speedrun.com/tamg" class="enabled" id="link-speedruns">Speedruns</a>
             <a href="assets.html" class="enabled" id="link-assets">OST &amp; Assets</a>
             <a href="news.html" class="enabled" id="link-news">News</a>
         </div>
