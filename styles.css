@@ -1,6 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Margarine&family=McLaren&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+:root,
+[data-theme="default"] {
+    --color-body-bg: #006B6B;
+    --color-container-bg: #00FFFF;
+    --color-section-bg: #FF0000;
+    --color-category-bg: #B2FF00;
+    --color-banner-bg: #FF5722;
+    --color-banner-text: #ffffff;
+    --color-banner-border: #000000;
+    --color-navbar-mobile-bg: #006B6B;
+    --color-activelink-bg: #B2FF00;
+    --color-activelink-play: #B2FF00;
+    --color-play-btn-bg: red;
+    --color-play-btn-shadow: black;
+    --color-play-btn-hover-bg: black;
+    --color-play-btn-hover-text: red;
+    --color-play-btn-hover-glow: red;
+    --color-section-heading: #ffffff;
+    --color-link: red;
+    --color-link-visited: rgb(158, 0, 0);
+    --color-link-hover-text: #ffffff;
+    --color-link-hover-bg: rgb(255, 0, 0);
+    --color-selection-text: #00FFFF;
+    --color-selection-bg: #000000;
+    --color-disabled-btn-bg: #333;
+    --color-disabled-btn-text: #aaa;
+    --color-game-wrapper-bg: #006B6B;
+    --color-game-border: #B2FF00;
+    --color-close-btn-bg: black;
+    --color-close-btn-text: white;
+    --color-close-btn-border: white;
+    --color-close-btn-hover-bg: white;
+    --color-close-btn-hover-text: black;
+    --color-close-btn-hover-border: black;
+    --color-navbar-link-bg: rgba(255, 255, 255, 0.75);
+    --color-navbar-link-text: black;
+    --color-play-text-shadow: rgb(255, 0, 0);
+}
+
+[data-theme="matrix"] {
+    --color-body-bg: #0a001b;
+    --color-container-bg: hsl(115, 100%, 50%);
+    --color-section-bg: hsl(115, 100%, 5%);
+    --color-category-bg: hsl(115, 100%, 50%);
+    --color-banner-bg: #000000;
+    --color-banner-text: #ffffff;
+    --color-banner-border: #000000;
+    --color-navbar-mobile-bg: #006b24;
+    --color-activelink-bg: #5d00ff;
+    --color-activelink-play: #5d00ff;
+    --color-play-btn-bg: red;
+    --color-play-btn-shadow: black;
+    --color-play-btn-hover-bg: black;
+    --color-play-btn-hover-text: red;
+    --color-play-btn-hover-glow: red;
+    --color-section-heading: #ffffff;
+    --color-link: rgb(180, 0, 0);
+    --color-link-visited: rgb(90, 0, 0);
+    --color-link-hover-text: #ffffff;
+    --color-link-hover-bg: rgb(255, 0, 0);
+    --color-selection-text: hsl(115, 100%, 50%);
+    --color-selection-bg: #000000;
+    --color-disabled-btn-bg: #333;
+    --color-disabled-btn-text: #aaa;
+    --color-game-wrapper-bg: #006B6B;
+    --color-game-border: #5d00ff;
+    --color-close-btn-bg: black;
+    --color-close-btn-text: white;
+    --color-close-btn-border: white;
+    --color-close-btn-hover-bg: white;
+    --color-close-btn-hover-text: black;
+    --color-close-btn-hover-border: black;
+    --color-navbar-link-bg: rgba(255, 255, 255, 0.75);
+    --color-navbar-link-text: black;
+    --color-play-text-shadow: rgb(255, 0, 0);
+}
+
+
 .sans {
     font-family: 'McLaren', sans-serif;
 }
@@ -23,26 +101,26 @@
 }
 
 a:not(.ost a, .navbar a) {
-    color: red;
-    text-decoration: underline solid 2px red;
+    color: var(--color-link);
+    text-decoration: underline solid 2px var(--color-link);
     transition: background-color 0.3s;
 }
 
 a:visited:not(.ost a, .navbar a) {
-    color: rgb(158, 0, 0);
-    text-decoration: underline wavy 2px red;
+    color: var(--color-link-visited);
+    text-decoration: underline wavy 2px var(--color-link);
 }
 
 a:hover:not(.ost a, .navbar a) {
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 0, 0);
+    color: var(--color-link-hover-text);
+    background-color: var(--color-link-hover-bg);
     text-decoration: none;
     filter: drop-shadow(2px 2px 8px black);
 }
 
 ::selection {
-    color: #00FFFF;
-    background-color: #000000;
+    color: var(--color-selection-text);
+    background-color: var(--color-selection-bg);
 }
 
 #header-placeholder {
@@ -50,15 +128,15 @@ a:hover:not(.ost a, .navbar a) {
 }
 
 .top-banner {
-    background-color: #FF5722;
-    color: white;
+    background-color: var(--color-banner-bg);
+    color: var(--color-banner-text);
     padding: 1rem 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
     position: relative;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid var(--color-banner-border);
     z-index: 2000;
     font-family: 'McLaren', sans-serif;
 }
@@ -78,9 +156,9 @@ a:hover:not(.ost a, .navbar a) {
 .close-banner {
     position: absolute;
     right: 15px;
-    background: black;
-    color: white;
-    border: 2px solid white;
+    background: var(--color-close-btn-bg);
+    color: var(--color-close-btn-text);
+    border: 2px solid var(--color-close-btn-border);
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -94,13 +172,13 @@ a:hover:not(.ost a, .navbar a) {
 
 .close-banner:hover {
     scale: 1.2;
-    background: white;
-    color: black;
-    border-color: black;
+    background: var(--color-close-btn-hover-bg);
+    color: var(--color-close-btn-hover-text);
+    border-color: var(--color-close-btn-hover-border);
 }
 
 body {
-    background-color: #006B6B;
+    background-color: var(--color-body-bg);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -110,7 +188,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #00FFFF;
+    background-color: var(--color-container-bg);
     width: clamp(320px, 60vw, 900px);
     margin: 0 auto;
     padding: 1% 3% 5%;
@@ -136,7 +214,7 @@ body {
 .blog {
     display: flex;
     flex-direction: column;
-    background-color: #FF0000;
+    background-color: var(--color-section-bg);
     padding: 0 1rem 1rem;
     width: 100%;
     box-sizing: border-box;
@@ -147,7 +225,7 @@ body {
 .ost h1,
 .blog h1 {
     font-size: clamp(1.5rem, 4vw, 3.25rem);
-    color: white;
+    color: var(--color-section-heading);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     word-break: break-word;
@@ -163,7 +241,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    background-color: #B2FF00;
+    background-color: var(--color-category-bg);
     padding: 1rem 2rem;
 }
 
@@ -198,7 +276,7 @@ body {
     gap: 0.5rem;
     align-items: center;
     text-align: center;
-    background-color: #B2FF00;
+    background-color: var(--color-category-bg);
     padding: 1rem 2rem;
 }
 
@@ -219,7 +297,7 @@ body {
     gap: 0.5rem;
     align-items: center;
     text-align: center;
-    background-color: #B2FF00;
+    background-color: var(--color-category-bg);
     padding: 1rem 2rem;
 }
 
@@ -252,7 +330,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: #B2FF00;
+    background-color: var(--color-category-bg);
     padding: 1rem 2rem;
     text-align: left;
 }
@@ -294,18 +372,18 @@ body {
 
 .navbar a {
     font-size: clamp(1rem, 1.4vw, 1.5rem);
-    color: black;
+    color: var(--color-navbar-link-text);
     text-decoration: none;
     white-space: nowrap;
     padding: clamp(1rem, 0.8vw, 1rem) clamp(1rem, 1.2vw, 2rem);
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: var(--color-navbar-link-bg);
     backdrop-filter: blur(5px);
     scale: 1;
     transition: all 0.3s ease;
 }
 
 .navbar a.activelink {
-    background-color: #B2FF00;
+    background-color: var(--color-activelink-bg);
 }
 
 .navbar a.enabled:hover {
@@ -317,49 +395,86 @@ body {
 }
 
 .navbar a.activelink:hover {
-    background-color: #B2FF00;
+    background-color: var(--color-activelink-bg);
 }
 
 .navbar a.play {
-    color: black;
-    background: red;
-    box-shadow: 10px 5px 3px black;
-    text-shadow: 3px 3px 10px rgb(255, 0, 0);
+    color: var(--color-navbar-link-text);
+    background: var(--color-play-btn-bg);
+    box-shadow: 10px 5px 3px var(--color-play-btn-shadow);
+    text-shadow: 3px 3px 10px var(--color-play-text-shadow);
     padding-left: clamp(4.2rem, 10vw, 10rem);
     padding-right: clamp(4.2rem, 10vw, 10rem);
 }
 
 .navbar a.play.activelink {
-    background: #B2FF00;
-    box-shadow: 10px 5px 3px black;
-    text-shadow: 3px 3px 10px rgb(255, 0, 0);
+    background: var(--color-activelink-play);
+    box-shadow: 10px 5px 3px var(--color-play-btn-shadow);
+    text-shadow: 3px 3px 10px var(--color-play-text-shadow);
     padding-left: clamp(4.2rem, 10vw, 10rem);
     padding-right: clamp(4.2rem, 10vw, 10rem);
 }
 
 .navbar a.play:hover {
-    color: red;
-    background: black;
-    box-shadow: 0px 0px 10px red;
-    text-shadow: 3px 3px 10px rgb(255, 0, 0);
+    color: var(--color-play-btn-hover-text);
+    background: var(--color-play-btn-hover-bg);
+    box-shadow: 0px 0px 10px var(--color-play-btn-hover-glow);
+    text-shadow: 3px 3px 10px var(--color-play-text-shadow);
 }
 
 .navbar a:not(.enabled) {
-    background-color: #333;
-    color: #aaa;
+    background-color: var(--color-disabled-btn-bg);
+    color: var(--color-disabled-btn-text);
     opacity: 0.75;
     z-index: -1;
+}
+
+#theme-toggle-placeholder {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: inherit;
+    transition: background-color 0.25s, color 0.25s, transform 0.15s, box-shadow 0.25s;
+    user-select: none;
+}
+
+.theme-toggle-btn:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    animation: scale-easeOutBounce 0.4s forwards;
+}
+
+.theme-toggle-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 0.4s ease;
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon {
+    transform: rotate(20deg) scale(1.2);
 }
 
 .game-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #006B6B;
+    background-color: var(--color-game-wrapper-bg);
     border-radius: 25px;
     padding: 2rem;
     box-sizing: border-box;
-    border: 45px solid #B2FF00;
+    border: 45px solid var(--color-game-border);
     border-style: groove;
 }
 
@@ -388,6 +503,28 @@ body {
     margin-top: 2rem;
 }
 
+.compare {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.compare img {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: all 0.4s;
+}
+
+.compare img:hover {
+    scale: 1.5;
+}
+
 @media (max-width: 900px) {
     .about .category {
         flex-direction: column;
@@ -403,7 +540,7 @@ body {
         height: auto;
         gap: 0.5rem;
         padding: 0.5rem;
-        background: #006B6B;
+        background: var(--color-navbar-mobile-bg);
         position: relative;
     }
 
@@ -429,28 +566,35 @@ body {
     .mobilenote {
         display: inline;
     }
-}
 
-.compare {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin: 10px 0;
-    width: 100%;
-}
+    .theme-switcher {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 0.25rem 0;
+    }
 
-.compare img {
-    flex: 1;
-    min-width: 0;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    transition: all 0.4s;
-}
+    .compare {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+        width: 100%;
+    }
 
-.compare img:hover {
-    scale: 1.5;
+    .compare img {
+        flex: 1;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        transition: all 0.4s;
+    }
+
+    .compare img:hover {
+        scale: 1.5;
+    }
 }
 
 @keyframes scale-easeOutBounce {
