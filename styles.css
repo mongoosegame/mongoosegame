@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Margarine&family=McLaren&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 .sans {
     font-family: 'McLaren', sans-serif;
@@ -14,11 +15,11 @@
 }
 
 .comic-sans {
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', 'Comic Neue', cursive;
 }
 
 .papyrus {
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', serif;
 }
 
 a:not(.ost a, .navbar a) {
@@ -239,7 +240,7 @@ body {
 }
 
 .ost .category a:hover {
-    animation: scale-easeOutBounce 0.4s forwards;   
+    animation: scale-easeOutBounce 0.4s forwards;
 }
 
 .ost .category p {
@@ -261,11 +262,6 @@ body {
     margin-bottom: 0;
     word-break: break-word;
     text-align: center;
-}
-
-.blog .category p {
-    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
-    margin-top: 0.5rem;
 }
 
 .navbar {
@@ -435,34 +431,65 @@ body {
     }
 }
 
+.compare {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.compare img {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: all 0.4s;
+}
+
+.compare img:hover {
+    scale: 1.5;
+}
+
 @keyframes scale-easeOutBounce {
     0% {
         transform: scale(1);
     }
+
     12% {
         transform: scale(1.055);
     }
+
     24% {
         transform: scale(1.22);
     }
+
     36% {
         transform: scale(1.49);
     }
+
     54% {
         transform: scale(1.375);
     }
+
     74% {
         transform: scale(1.49);
     }
+
     82% {
         transform: scale(1.47);
     }
+
     92% {
         transform: scale(1.495);
     }
+
     96% {
         transform: scale(1.49);
     }
+
     100% {
         transform: scale(1.5);
     }
