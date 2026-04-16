@@ -72,10 +72,10 @@
     --color-play-btn-hover-text: red;
     --color-play-btn-hover-glow: red;
     --color-section-heading: #ffffff;
-    --color-link: lime;
-    --bg-link: black;
-    --color-link-hover-text: #000000;
-    --color-link-hover-bg: rgb(255, 0, 0);
+    --color-link: #003f0a;
+    --bg-link: transparent;
+    --color-link-hover-text: #15ff00;
+    --color-link-hover-bg: rgb(0, 0, 0);
     --color-selection-text: hsl(115, 100%, 50%);
     --color-selection-bg: #000000;
     --color-disabled-btn-bg: #333;
@@ -119,7 +119,7 @@
     --color-play-btn-hover-glow: #8c4b1e;
     --color-section-heading: #ffffff;
     --color-link: #8c4b1e;
-    --bg-link: #bfae7c;
+    --bg-link: transparent;
     --color-link-hover-text: #ffffff;
     --color-link-hover-bg: #8c4b1e;
     --color-selection-text: #ffffff;
@@ -165,7 +165,7 @@
     --color-play-btn-hover-glow: #8c00ff;
     --color-section-heading: #ffffff;
     --color-link: #8c00ff;
-    --bg-link: #8fffff;
+    --bg-link: transparent;
     --color-link-hover-text: #ffffff;
     --color-link-hover-bg: rgb(140, 0, 255);
     --color-selection-text: #00FFFF;
@@ -210,8 +210,8 @@
     --color-play-btn-hover-text: #ff0080;
     --color-play-btn-hover-glow: #ff0080;
     --color-section-heading: #ffffff;
-    --color-link: #ff0080;
-    --bg-link: #2a0531;
+    --color-link: #2c001a;
+    --bg-link: transparent;
     --color-link-hover-text: #ffffff;
     --color-link-hover-bg: rgb(255, 135, 205);
     --color-selection-text: #FF00FF;
@@ -267,13 +267,9 @@
 a:not(.btn-link, .navbar a) {
     color: var(--color-link);
     text-decoration: underline solid 2px var(--color-link);
-    background: var(--bg-link);
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    border-radius: 2px;
     scale: 1.0;
+    font-style: italic;
+    font-weight: bold;
     transition: all 0.3s;
 }
 
@@ -282,8 +278,8 @@ a:hover:not(.btn-link, .navbar a) {
     background-color: var(--color-link-hover-bg);
     text-decoration: none;
     filter: drop-shadow(2px 2px 8px black);
+    font-style: normal;
     scale: 1.1;
-    border-radius: 999px;
 }
 
 ::selection {
