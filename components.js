@@ -3,8 +3,8 @@ function loadHeader() {
     setFavicon();
     const headerHTML = `
     <div class="top-banner" id="announcement">
-        <img src="resources/img/gameicon.jpg" alt="Game Icon">
-        <p>Our speedrun.com page is now live! Check it out <a target="_blank" rel="noopener noreferrer" href="https://www.speedrun.com/tamg">here</a>!</p>
+        <img src="resources/img/gameicon.webp" alt="Game Icon">
+        <p>Awesome Mongoose Game v1.2: Style and Selection is out now!</p>
         <button class="close-banner" onclick="dismissBanner()">X</button>
     </div>
     <div class="navbar comic-sans">
@@ -58,7 +58,7 @@ function setFavicon() {
         link.rel = 'icon';
         document.head.appendChild(link);
     }
-    link.href = 'resources/img/gameicon.jpg';
+    link.href = 'resources/img/gameicon.webp';
 }
 
 function initTheme() {
@@ -71,38 +71,33 @@ function initTheme() {
         const placeholder = document.createElement('div');
         placeholder.id = 'theme-toggle-placeholder';
         placeholder.innerHTML = `
-            <button id="theme-toggle-btn" class="theme-toggle-btn comic-sans" aria-label="Toggle theme" onclick="toggleTheme()">
-                <span class="theme-toggle-icon"></span>
-                <span class="theme-toggle-label"></span>
-            </button>
+            <select id="theme-select" class="theme-select comic-sans" aria-label="Change theme" onchange="changeTheme(this.value)">
+                <option value="default">Regular Theme</option>
+                <option value="matrix">Matrix and Mastery Launch Theme</option>
+                <option value="mongoose_1">Style and Selection Launch Theme (Mongoose)</option>
+                <option value="mongoose_2">Style and Selection Launch Theme (John Mop)</option>
+                <option value="mongoose_3">Style and Selection Launch Theme (Jane)</option>
+            </select>
         `;
         container.insertBefore(placeholder, firstH1);
-        updateToggleBtn(saved);
+        updateThemeSelect(saved);
     }
 }
 
-function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme') || 'default';
-    const next = current === 'default' ? 'matrix' : 'default';
-    applyTheme(next, true);
+function changeTheme(theme) {
+    applyTheme(theme, true);
 }
 
 function applyTheme(theme, save) {
     document.documentElement.setAttribute('data-theme', theme);
     if (save) localStorage.setItem('theme', theme);
-    updateToggleBtn(theme);
+    updateThemeSelect(theme);
 }
 
-function updateToggleBtn(theme) {
-    const btn = document.getElementById('theme-toggle-btn');
-    if (!btn) return;
-    const label = btn.querySelector('.theme-toggle-label');
-    if (theme === 'matrix') {
-        label.textContent = 'Switch to regular theme';
-        btn.setAttribute('data-current-theme', 'matrix');
-    } else {
-        label.textContent = 'Switch to Matrix and Mastery launch theme';
-        btn.setAttribute('data-current-theme', 'default');
+function updateThemeSelect(theme) {
+    const select = document.getElementById('theme-select');
+    if (select) {
+        select.value = theme;
     }
 }
 
