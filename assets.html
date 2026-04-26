@@ -13,95 +13,383 @@
     <script src="components.js"></script>
     <div class="container">
         <h1 class="cursive">Discover Official Awesome Mongoose Game OST and Assets</h1>
-        <div class="section-block">
-            <h1 class="playful">OST</h1>
-            <div class="list-vertical">
 
-                <div class="card-col-center ost1">
-                    <a class="btn-link playful" href="resources/audio/song/Glass Bridge Game (Instrumental).mp3"
-                        download>Download Level 1 -
-                        Glass Bridge Game (Instrumental)</a>
-                    <p class="sans">Composer: Tuff Grigma Gaming</p>
+        <div class="tabs-container">
+            <button id="tab-ost" class="tab-btn active playful" onclick="switchTab('ost')">OST</button>
+            <button id="tab-assets" class="tab-btn playful" onclick="switchTab('assets')">Assets</button>
+        </div>
+
+        <div id="view-ost" class="view-section active">
+            <div class="section-block">
+                <h1 class="playful">OST</h1>
+                <div class="list-vertical ost-list">
+                    <p class="sans">Download songs by clicking on the discs!</p>
+                    <img src="resources/img/mongoose_music_alert.webp" alt="Disclaimer for use of music">
+
+                    <div class="section-block">
+                        <h2 class=" playful">Glass Bridge Game (Instrumental)</h2>
+                        <div class="list-vertical">
+                            <div class="song-wrapper card-col-center">
+                                <div class="song-cover">
+                                    <img src="resources/img/ost1.webp" alt="Album Cover">
+                                    <a href="resources/audio/song/Glass Bridge Game (Instrumental).mp3" download>
+                                        <img src="resources/img/disk.webp">
+                                    </a>
+                                </div>
+                                <div class="song-details card-col-center">
+                                    <div class="song-listen">
+                                        <h2 class="playful">Listen here</h2>
+                                        <audio controls
+                                            src="resources/audio/song/Glass Bridge Game (Instrumental).mp3"></audio>
+                                    </div>
+                                    <div class="song-info card-col-center">
+                                        <h2 class="playful">Info</h2>
+                                        <p class="sans"><b>Title:</b> Glass Bridge Game (Instrumental)</p>
+                                        <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
+                                        <p class="sans"><b>Present in:</b> Level 1</p>
+                                        <p class="sans"><b>Album/Update:</b> v1.0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-                    <p class="playful">Alternatively, listen here!</p>
-                    <audio controls>
-                        <source src="resources/audio/song/Glass Bridge Game (Instrumental).mp3" type="audio/mpeg">
-                    </audio>
+                    <div class="section-block">
+                        <h2 class=" playful">Rewind</h2>
+                        <div class="list-vertical">
+                            <div class="song-wrapper card-col-center">
+                                <div class="song-cover">
+                                    <img src="resources/img/ost1.webp" alt="Album Cover">
+                                    <a href="resources/audio/song/Rewind.mp3" download>
+                                        <img src="resources/img/disk.webp">
+                                    </a>
+                                </div>
+                                <div class="song-details card-col-center">
+                                    <div class="song-listen">
+                                        <h2 class="playful">Listen here</h2>
+                                        <audio controls src="resources/audio/song/Rewind.mp3"></audio>
+                                    </div>
+                                    <div class="song-info card-col-center">
+                                        <h2 class="playful">Info</h2>
+                                        <p class="sans"><b>Title:</b> Rewind</p>
+                                        <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
+                                        <p class="sans"><b>Present in:</b> Level 2</p>
+                                        <p class="sans"><b>Album/Update:</b> v1.0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-block">
+                        <h2 class=" playful">HRUE (How are you, Edwin?) (Instrumental)</h2>
+                        <div class="list-vertical">
+                            <div class="song-wrapper card-col-center">
+                                <div class="song-cover">
+                                    <img src="resources/img/ost2.webp" alt="Album Cover">
+                                    <a href="resources/audio/song/HRUE (Instrumental).mp3" download>
+                                        <img src="resources/img/disk.webp">
+                                    </a>
+                                </div>
+                                <div class="song-details card-col-center">
+                                    <div class="song-listen">
+                                        <h2 class="playful">Listen here</h2>
+                                        <audio controls src="resources/audio/song/HRUE (Instrumental).mp3"></audio>
+                                    </div>
+                                    <div class="song-info card-col-center">
+                                        <h2 class="playful">Info</h2>
+                                        <p class="sans"><b>Title:</b> HRUE (How are you, Edwin?) (Instrumental)</p>
+                                        <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
+                                        <p class="sans"><b>Present in:</b> Level M (Legacy)</p>
+                                        <p class="sans"><b>Album/Update:</b> v1.1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-block">
+                        <h2 class=" playful">Matrix and Mastery</h2>
+                        <div class="list-vertical">
+                            <div class="song-wrapper card-col-center">
+                                <div class="song-cover">
+                                    <img src="resources/img/ost2.webp" alt="Album Cover">
+                                    <a href="resources/audio/song/Matrix and Mastery.mp3" download>
+                                        <img src="resources/img/disk.webp">
+                                    </a>
+                                </div>
+                                <div class="song-details card-col-center">
+                                    <div class="song-listen">
+                                        <h2 class="playful">Listen here</h2>
+                                        <audio controls src="resources/audio/song/Matrix and Mastery.mp3"></audio>
+                                    </div>
+                                    <div class="song-info card-col-center">
+                                        <h2 class="playful">Info</h2>
+                                        <p class="sans"><b>Title:</b> Matrix and Mastery</p>
+                                        <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
+                                        <p class="sans"><b>Present in:</b> Level M</p>
+                                        <p class="sans"><b>Album/Update:</b> v1.1.1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-block">
+                        <h2 class=" playful">Matrix and Mastery (Main Menu)</h2>
+                        <div class="list-vertical">
+                            <div class="song-wrapper card-col-center">
+                                <div class="song-cover">
+                                    <img src="resources/img/ost3.webp" alt="Album Cover">
+                                    <a href="resources/audio/song/Main Menu - Matrix and Mastery.mp3" download>
+                                        <img src="resources/img/disk.webp">
+                                    </a>
+                                </div>
+                                <div class="song-details card-col-center">
+                                    <div class="song-listen">
+                                        <h2 class="playful">Listen here</h2>
+                                        <audio controls
+                                            src="resources/audio/song/Main Menu - Matrix and Mastery.mp3"></audio>
+                                    </div>
+                                    <div class="song-info card-col-center">
+                                        <h2 class="playful">Info</h2>
+                                        <p class="sans"><b>Title:</b> Matrix and Mastery (Main Menu)</p>
+                                        <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
+                                        <p class="sans"><b>Present in:</b> Main Menu</p>
+                                        <p class="sans"><b>Album/Update:</b> v1.2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="section-block">
+                        <h2 class=" playful">Stylish Mongeese</h2>
+                        <div class="list-vertical">
+                            <div class="song-wrapper card-col-center">
+                                <div class="song-cover">
+                                    <img src="resources/img/ost3.webp" alt="Album Cover">
+                                    <a href="resources/audio/song/Stylish Mongeese.mp3" download>
+                                        <img src="resources/img/disk.webp">
+                                    </a>
+                                </div>
+                                <div class="song-details card-col-center">
+                                    <div class="song-listen">
+                                        <h2 class="playful">Listen here</h2>
+                                        <audio controls src="resources/audio/song/Stylish Mongeese.mp3"></audio>
+                                    </div>
+                                    <div class="song-info card-col-center">
+                                        <h2 class="playful">Info</h2>
+                                        <p class="sans"><b>Title:</b> Stylish Mongeese</p>
+                                        <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
+                                        <p class="sans"><b>Present in:</b> v1.2 Trailer</p>
+                                        <p class="sans"><b>Album/Update:</b> v1.2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+            </div>
+        </div>
+
+        <div id="view-assets" class="view-section">
+            <div class="section-block">
+                <h1 class="playful">Assets</h1>
+                <p class="sans">Click on an asset to download it!</p>
+                <p class="sans">Note: All of the provided assets are PNGs and may load slowly.</p>
+                <img src="resources/img/mongoose_asset_alert.webp" alt="Disclaimer for use of assets">
+                <div class="list-vertical asset-list">
 
 
 
-                <div class="card-col-center ost1">
-                    <a class="btn-link playful" href="resources/audio/song/Rewind.mp3" download>Download Level 2 -
-                        Rewind</a>
-                    <p class="sans">Composer: Tuff Grigma Gaming</p>
+                    <h2>Mongeese (Original Game)</h2>
+                    <hr>
+                    <h3>Left-Right</h3>
+                    <a href="resources/img/assets/mongoose.png" download class="non-a-link" data-alt="Mongoose"><img
+                            src="resources/img/assets/mongoose.png" alt="Mongoose"></a>
 
-                    <p class="playful">Alternatively, listen here!</p>
-                    <audio controls>
-                        <source src="resources/audio/song/Rewind.mp3" type="audio/mpeg">
-                    </audio>
+                    <a href="resources/img/assets/john-mop.png" download class="non-a-link" data-alt="John Mop"><img
+                            src="resources/img/assets/john-mop.png" alt="John Mop"></a>
+
+                    <a href="resources/img/assets/jane-ottovordemgentschenfelde.png" download class="non-a-link"
+                        data-alt="Jane Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/jane-ottovordemgentschenfelde.png"
+                            alt="Jane Ottovordemgentschenfelde"></a>
+                    <h3>Straight</h3>
+                    <a href="resources/img/assets/mongoose_straight.png" download class="non-a-link"
+                        data-alt="Mongoose"><img src="resources/img/assets/mongoose_straight.png" alt="Mongoose"></a>
+
+                    <a href="resources/img/assets/john-mop_straight.png" download class="non-a-link"
+                        data-alt="John Mop"><img src="resources/img/assets/john-mop_straight.png" alt="John Mop"></a>
+
+                    <a href="resources/img/assets/jane-ottovordemgentschenfelde_straight.png" download
+                        class="non-a-link" data-alt="Jane Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/jane-ottovordemgentschenfelde_straight.png"
+                            alt="Jane Ottovordemgentschenfelde"></a>
+
+
+
+                    <h2>Mongeese (Other)</h2>
+                    <hr>
+                    <h3>Left-Right</h3>
+                    <a href="resources/img/assets/cool-mongoose.png" download class="non-a-link"
+                        data-alt="Cool Mongoose"><img src="resources/img/assets/cool-mongoose.png"
+                            alt="Cool Mongoose"></a>
+                    <a href="resources/img/assets/cool-john-mop.png" download class="non-a-link"
+                        data-alt="Cool John Mop"><img src="resources/img/assets/cool-john-mop.png"
+                            alt="Cool John Mop"></a>
+                    <a href="resources/img/assets/cool-jane-ottovordemgentschenfelde.png" download class="non-a-link"
+                        data-alt="Cool Jane Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/cool-jane-ottovordemgentschenfelde.png"
+                            alt="Cool Jane Ottovordemgentschenfelde"></a>
+                    <a href="resources/img/assets/feisty-little-mongoose.png" download class="non-a-link"
+                        data-alt="Feisty Little Mongoose"><img src="resources/img/assets/feisty-little-mongoose.png"
+                            alt="Feisty Little Mongoose"></a>
+                    <a href="resources/img/assets/hamilton-harper.png" download class="non-a-link"
+                        data-alt="Hamilton Harper"><img src="resources/img/assets/hamilton-harper.png"
+                            alt="Hamilton Harper"></a>
+                    <a href="resources/img/assets/william.png" download class="non-a-link" data-alt="William"><img
+                            src="resources/img/assets/william.png" alt="William"></a>
+                    <a href="resources/img/assets/judy-ottovordemgentschenfelde.png" download class="non-a-link"
+                        data-alt="Judy Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/judy-ottovordemgentschenfelde.png"
+                            alt="Judy Ottovordemgentschenfelde"></a>
+                    <a href="resources/img/assets/jane-ottovordemgentschenfelde_saturated.png" download
+                        class="non-a-link" data-alt="Saturated Jane Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/jane-ottovordemgentschenfelde_saturated.png"
+                            alt="Saturated Jane Ottovordemgentschenfelde"></a>
+
+                    <h3>Straight</h3>
+                    <a href="resources/img/assets/cool-mongoose_straight.png" download class="non-a-link"
+                        data-alt="Cool Mongoose"><img src="resources/img/assets/cool-mongoose_straight.png"
+                            alt="Cool Mongoose"></a>
+                    <a href="resources/img/assets/cool-john-mop_straight.png" download class="non-a-link"
+                        data-alt="Cool John Mop"><img src="resources/img/assets/cool-john-mop_straight.png"
+                            alt="Cool John Mop"></a>
+                    <a href="resources/img/assets/cool-jane-ottovordemgentschenfelde_straight.png" download
+                        class="non-a-link" data-alt="Cool Jane Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/cool-jane-ottovordemgentschenfelde_straight.png"
+                            alt="Cool Jane Ottovordemgentschenfelde"></a>
+                    <a href="resources/img/assets/feisty-little-mongoose_straight.png" download class="non-a-link"
+                        data-alt="Feisty Little Mongoose"><img
+                            src="resources/img/assets/feisty-little-mongoose_straight.png"
+                            alt="Feisty Little Mongoose"></a>
+                    <a href="resources/img/assets/hamilton-harper_straight.png" download class="non-a-link"
+                        data-alt="Hamilton Harper"><img src="resources/img/assets/hamilton-harper_straight.png"
+                            alt="Hamilton Harper"></a>
+                    <a href="resources/img/assets/william_straight.png" download class="non-a-link"
+                        data-alt="William"><img src="resources/img/assets/william_straight.png" alt="William"></a>
+                    <a href="resources/img/assets/judy-ottovordemgentschenfelde_straight.png" download
+                        class="non-a-link" data-alt="Judy Ottovordemgentschenfelde"><img
+                            src="resources/img/assets/judy-ottovordemgentschenfelde_straight.png"
+                            alt="Judy Ottovordemgentschenfelde"></a>
+                    <a href="resources/img/assets/jane_straight_fire.png" download class="non-a-link"
+                        data-alt="Jane Ottovordemgentschenfelde (Fire)"><img
+                            src="resources/img/assets/jane_straight_fire.png"
+                            alt="Jane Ottovordemgentschenfelde (Fire)"></a>
+
+
+
+                    <h2>Soundtrack Album Covers</h2>
+                    <hr>
+                    <a href="resources/img/assets/ost-1.png" download class="non-a-link"
+                        data-alt="v1.0 Soundtrack Album Cover"><img src="resources/img/assets/ost-1.png"
+                            alt="v1.0 Soundtrack Album Cover"></a>
+
+                    <a href="resources/img/assets/ost-2.png" download class="non-a-link"
+                        data-alt="v1.1 Soundtrack Album Cover"><img src="resources/img/assets/ost-2.png"
+                            alt="v1.1 Soundtrack Album Cover"></a>
+
+                    <a href="resources/img/assets/ost-3.png" download class="non-a-link"
+                        data-alt="v1.2 Soundtrack Album Cover"><img src="resources/img/assets/ost-3.png"
+                            alt="v1.2 Soundtrack Album Cover"></a>
+
+
+
+                    <h2>Icons</h2>
+                    <hr>
+                    <a href="resources/img/assets/icon-pfp.png" download class="non-a-link"
+                        data-alt="Profile picture (Twitter)"><img src="resources/img/assets/icon-pfp.png"
+                            alt="Profile picture (Twitter)"></a>
+
+                    <a href="resources/img/assets/icon-speedruncom.png" download class="non-a-link"
+                        data-alt="Speedrun.com Icon"><img src="resources/img/assets/icon-speedruncom.png"
+                            alt="Speedrun.com Icon"></a>
+
+
+
+
+                    <h2>Titles</h2>
+                    <hr>
+                    <a href="resources/img/assets/title-1.0_rainbow.png" download class="non-a-link"
+                        data-alt="v1.0 Title (Rainbow)"><img src="resources/img/assets/title-1.0_rainbow.png"
+                            alt="v1.0 Title (Rainbow)"></a>
+                    <a href="resources/img/assets/title-1.0_yellow.png" download class="non-a-link"
+                        data-alt="v1.0 Title (Yellow)"><img src="resources/img/assets/title-1.0_yellow.png"
+                            alt="v1.0 Title (Yellow)"></a>
+                    <a href="resources/img/assets/title-1.1.png" download class="non-a-link" data-alt="v1.1 Title"><img
+                            src="resources/img/assets/title-1.1.png" alt="v1.1 Title"></a>
+                    <a href="resources/img/assets/title-1.2.png" download class="non-a-link" data-alt="v1.2 Title"><img
+                            src="resources/img/assets/title-1.2.png" alt="v1.2 Title"></a>
+
+                    <h2>Tilesets (Original)</h2>
+                    <hr>
+                    <a href="resources/img/assets/tiles-castle.png" download class="non-a-link"
+                        data-alt="Castle Tiles"><img src="resources/img/assets/tiles-castle.png" alt="Castle Tiles"></a>
+                    <a href="resources/img/assets/tiles-matrix.png" download class="non-a-link"
+                        data-alt="Matrix Tiles"><img src="resources/img/assets/tiles-matrix.png" alt="Matrix Tiles"></a>
+                    <a href="resources/img/assets/tiles-matrix_moving.png" download class="non-a-link"
+                        data-alt="Moving Matrix Tiles"><img src="resources/img/assets/tiles-matrix_moving.png"
+                            alt="Moving Matrix Tiles"></a>
+                    <a href="resources/img/assets/tiles-mongooseland.png" download class="non-a-link"
+                        data-alt="Mongooseland Tiles"><img src="resources/img/assets/tiles-mongooseland.png"
+                            alt="Mongooseland Tiles"></a>
+
+                    <h2>Tilesets (Revised)</h2>
+                    <hr>
+                    <a href="resources/img/assets/revised-tiles-castle.png" download class="non-a-link"
+                        data-alt="Revised Castle Tiles"><img src="resources/img/assets/revised-tiles-castle.png"
+                            alt="Revised Castle Tiles"></a>
+                    <a href="resources/img/assets/revised-tiles-matrix.png" download class="non-a-link"
+                        data-alt="Revised Matrix Tiles"><img src="resources/img/assets/revised-tiles-matrix.png"
+                            alt="Revised Matrix Tiles"></a>
+                    <a href="resources/img/assets/revised-tiles-matrix_moving.png" download class="non-a-link"
+                        data-alt="Revised Moving Matrix Tiles"><img
+                            src="resources/img/assets/revised-tiles-matrix_moving.png"
+                            alt="Revised Moving Matrix Tiles"></a>
+                    <a href="resources/img/assets/revised-tiles-mongooseland.png" download class="non-a-link"
+                        data-alt="Revised Mongooseland Tiles"><img
+                            src="resources/img/assets/revised-tiles-mongooseland.png"
+                            alt="Revised Mongooseland Tiles"></a>
+
+                    <h2>Misc</h2>
+                    <hr>
+                    <a href="resources/img/assets/grass.png" download class="non-a-link" data-alt="Grass"><img
+                            src="resources/img/assets/grass.png" alt="Grass"></a>
                 </div>
-
-
-
-                <div class="card-col-center ost1">
-                    <a class="btn-link playful" href="resources/audio/song/HRUE (Instrumental).mp3" download>Download
-                        Level M
-                        (Legacy) -
-                        How are you, Edwin (HRUE) (Instrumental)</a>
-                    <p class="sans">Composer: Tuff Grigma Gaming</p>
-
-                    <p class="playful">Alternatively, listen here!</p>
-                    <audio controls>
-                        <source src="resources/audio/song/HRUE (Instrumental).mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-
-
-                <div class="card-col-center ost2">
-                    <a class="btn-link playful" href="resources/audio/song/Matrix and Mastery.mp3" download>Download
-                        Level M
-                        (New) -
-                        Matrix and Mastery</a>
-                    <p class="sans">Composer: Tuff Grigma Gaming</p>
-
-                    <p class="playful">Alternatively, listen here!</p>
-                    <audio controls>
-                        <source src="resources/audio/song/Matrix and Mastery.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-
-                <div class="card-col-center ost2">
-                    <a class="btn-link playful" href="resources/audio/song/Main Menu - Matrix and Mastery.mp3"
-                        download>Download Main Menu - Matrix and Mastery (Main Menu Version)</a>
-                    <p class="sans">Composer: Tuff Grigma Gaming</p>
-
-                    <p class="playful">Alternatively, listen here!</p>
-                    <audio controls>
-                        <source src="resources/audio/song/Main Menu - Matrix and Mastery.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-
-
-                <div class="card-col-center ost3">
-                    <a class="btn-link playful" href="resources/audio/song/Stylish Mongeese (v1.2 Trailer Music).mp3"
-                        download>Download Stylish Mongeese (v1.2 Trailer Music)</a>
-                    <p class="sans">Composer: Tuff Grigma Gaming</p>
-
-                    <p class="playful">Alternatively, listen here!</p>
-                    <audio controls>
-                        <source src="resources/audio/song/Stylish Mongeese (v1.2 Trailer Music).mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-
-
             </div>
         </div>
     </div>
+
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+            document.getElementById('view-' + tab).classList.add('active');
+            document.getElementById('tab-' + tab).classList.add('active');
+        }
+    </script>
 </body>
 
 </html>

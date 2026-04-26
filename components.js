@@ -4,14 +4,14 @@ function loadHeader() {
     const headerHTML = `
     <div class="top-banner" id="announcement">
         <img src="resources/img/gameicon.webp" alt="Game Icon">
-        <p>Awesome Mongoose Game v1.2: Style and Selection is out now!</p>
+        <p>Check out the updated <a href="assets.html">OST & Assets</a> page!</p>
         <button class="close-banner" onclick="dismissBanner()">X</button>
     </div>
     <div class="navbar comic-sans">
         <div class="left">
             <a href="index.html" class="enabled" id="link-index">Home</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.speedrun.com/tamg" class="enabled" id="link-speedruns">Speedruns</a>
-            <a href="assets.html" class="enabled" id="link-assets">OST &amp; Assets</a>
+            <a href="speedruns.html" class="enabled" id="link-speedruns">Speedruns</a>
+            <a href="assets.html" class="enabled" id="link-assets">OST & Assets</a>
             <a href="news.html" class="enabled" id="link-news">News</a>
         </div>
         <div class="right">
@@ -77,6 +77,7 @@ function initTheme() {
                 <option value="mongoose_1">Style and Selection Launch Theme (Mongoose)</option>
                 <option value="mongoose_2">Style and Selection Launch Theme (John Mop)</option>
                 <option value="mongoose_3">Style and Selection Launch Theme (Jane)</option>
+                <option value="level_1">Mongooseland (Level 1) Theme</option>
             </select>
         `;
         container.insertBefore(placeholder, firstH1);
@@ -109,7 +110,60 @@ function dismissBanner() {
 }
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadHeader);
+    document.addEventListener('DOMContentLoaded', () => {
+        loadHeader();
+        loadFooter();
+        initImageZoom();
+    });
 } else {
     loadHeader();
+    loadFooter();
+    initImageZoom();
+}
+
+function initImageZoom() {
+    document.querySelectorAll('.img-responsive').forEach(img => {
+        // Prevent double wrapping
+        if (img.parentElement.classList.contains('img-zoom-wrapper')) return;
+
+        // Wrap the image to clip its bounds
+        const wrapper = document.createElement('div');
+        wrapper.className = 'img-zoom-wrapper';
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+
+        // Track cursor to move the zoomed point
+        wrapper.addEventListener('mousemove', e => {
+            const rect = wrapper.getBoundingClientRect();
+            let x = ((e.clientX - rect.left) / rect.width) * 100;
+            let y = ((e.clientY - rect.top) / rect.height) * 100;
+
+            x = Math.max(0, Math.min(100, x));
+            y = Math.max(0, Math.min(100, y));
+
+            img.style.transformOrigin = `${x}% ${y}%`;
+        });
+    });
+}
+
+function loadFooter() {
+    if (document.getElementById('site-footer')) return;
+    const footer = document.createElement('footer');
+    footer.id = 'site-footer';
+
+    const p1 = document.createElement('p');
+    p1.innerHTML = 'For your feedback and fan-mail:';
+
+    const p2 = document.createElement('h3');
+    p2.id = "email";
+    p2.innerHTML = 'awesomemongoosegame@gmail.com';
+
+    const p3 = document.createElement('a');
+    p3.href = "meettheteam.html";
+    p3.innerHTML = 'Page: Meet the team!';
+
+    footer.appendChild(p1);
+    footer.appendChild(p2);
+    footer.appendChild(p3);
+    document.body.appendChild(footer);
 }
