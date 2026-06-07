@@ -1309,6 +1309,41 @@ img {
         animation: scale-easeOutBounce 0.4s forwards;
         background: var(--navbar-bg-hover);
     }
+
+    footer * {
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
+
+    .song-cover {
+        height: 220px;
+    }
+
+    .song-cover>*:nth-child(2) {
+        margin-left: -130px;
+    }
+
+    .song-cover:has(> *:nth-child(2):hover)>*:nth-child(1) {
+        transform: translateX(-25px);
+    }
+
+    .song-cover>*:nth-child(2):hover {
+        margin-left: -75px;
+    }
+
+    .song-cover img {
+        max-height: 220px;
+    }
+
+    audio {
+        min-width: 100%;
+    }
+
+    .song-details,
+    .song-info {
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
 }
 
 @keyframes scale-easeOutBounce {
