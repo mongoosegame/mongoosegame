@@ -71,7 +71,7 @@ function initTheme() {
         const placeholder = document.createElement('div');
         placeholder.id = 'theme-toggle-placeholder';
         placeholder.innerHTML = `
-            <select id="theme-select" class="theme-select comic-sans" aria-label="Change theme" onchange="changeTheme(this.value)">
+            <select id="theme-select" class="theme-select comic-sans" aria-label="Change theme" onchange="applyTheme(this.value, true)">
                 <option value="default">Regular Theme</option>
                 <option value="matrix">Matrix and Mastery Launch Theme</option>
                 <option value="mongoose_1">Style and Selection Launch Theme (Mongoose)</option>
@@ -81,25 +81,15 @@ function initTheme() {
             </select>
         `;
         container.insertBefore(placeholder, firstH1);
-        updateThemeSelect(saved);
+        document.getElementById('theme-select').value = saved;
     }
-}
-
-function changeTheme(theme) {
-    applyTheme(theme, true);
 }
 
 function applyTheme(theme, save) {
     document.documentElement.setAttribute('data-theme', theme);
     if (save) localStorage.setItem('theme', theme);
-    updateThemeSelect(theme);
-}
-
-function updateThemeSelect(theme) {
     const select = document.getElementById('theme-select');
-    if (select) {
-        select.value = theme;
-    }
+    if (select) select.value = theme;
 }
 
 function dismissBanner() {
@@ -113,57 +103,20 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         loadHeader();
         loadFooter();
-        initImageZoom();
     });
 } else {
     loadHeader();
     loadFooter();
-    initImageZoom();
-}
-
-function initImageZoom() {
-    document.querySelectorAll('.img-responsive').forEach(img => {
-        // Prevent double wrapping
-        if (img.parentElement.classList.contains('img-zoom-wrapper')) return;
-
-        // Wrap the image to clip its bounds
-        const wrapper = document.createElement('div');
-        wrapper.className = 'img-zoom-wrapper';
-        img.parentNode.insertBefore(wrapper, img);
-        wrapper.appendChild(img);
-
-        // Track cursor to move the zoomed point
-        wrapper.addEventListener('mousemove', e => {
-            const rect = wrapper.getBoundingClientRect();
-            let x = ((e.clientX - rect.left) / rect.width) * 100;
-            let y = ((e.clientY - rect.top) / rect.height) * 100;
-
-            x = Math.max(0, Math.min(100, x));
-            y = Math.max(0, Math.min(100, y));
-
-            img.style.transformOrigin = `${x}% ${y}%`;
-        });
-    });
 }
 
 function loadFooter() {
     if (document.getElementById('site-footer')) return;
     const footer = document.createElement('footer');
     footer.id = 'site-footer';
-
-    const p1 = document.createElement('p');
-    p1.innerHTML = 'For your feedback and fan-mail:';
-
-    const p2 = document.createElement('h3');
-    p2.id = "email";
-    p2.innerHTML = 'awesomemongoosegame@gmail.com';
-
-    const p3 = document.createElement('a');
-    p3.href = "meettheteam.html";
-    p3.innerHTML = 'Page: Meet the team!';
-
-    footer.appendChild(p1);
-    footer.appendChild(p2);
-    footer.appendChild(p3);
+    footer.innerHTML = `
+        <p>For your feedback and fan-mail:</p>
+        <h3 id="email">awesomemongoosegame@gmail.com</h3>
+        <a href="meettheteam.html">Page: Meet the team!</a>
+    `;
     document.body.appendChild(footer);
 }

@@ -11,6 +11,7 @@
 <body>
     <div id="header-placeholder"></div>
     <script src="components.js"></script>
+    <script src="script.js"></script>
     <div class="container">
         <h1 class="cursive">Discover Official Awesome Mongoose Game OST and Assets</h1>
 
@@ -26,6 +27,12 @@
                     <p class="sans">Download songs by clicking on the discs!</p>
                     <img src="resources/img/mongoose_music_alert.webp" alt="Disclaimer for use of music">
 
+                    <div id="category-nav-ost" class="sticky-category-nav">
+                        <button class="prev-btn">&lt;</button>
+                        <span id="current-category-ost">Category</span>
+                        <button class="next-btn">&gt;</button>
+                    </div>
+
                     <div class="section-block">
                         <h2 class=" playful">Glass Bridge Game (Instrumental)</h2>
                         <div class="list-vertical">
@@ -38,12 +45,12 @@
                                 </div>
                                 <div class="song-details card-col-center">
                                     <div class="song-listen">
-                                        <h2 class="playful">Listen here</h2>
+                                        <h3 class="playful">Listen here</h3>
                                         <audio controls
                                             src="resources/audio/song/Glass Bridge Game (Instrumental).mp3"></audio>
                                     </div>
                                     <div class="song-info card-col-center">
-                                        <h2 class="playful">Info</h2>
+                                        <h3 class="playful">Info</h3>
                                         <p class="sans"><b>Title:</b> Glass Bridge Game (Instrumental)</p>
                                         <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
                                         <p class="sans"><b>Present in:</b> Level 1</p>
@@ -67,11 +74,11 @@
                                 </div>
                                 <div class="song-details card-col-center">
                                     <div class="song-listen">
-                                        <h2 class="playful">Listen here</h2>
+                                        <h3 class="playful">Listen here</h3>
                                         <audio controls src="resources/audio/song/Rewind.mp3"></audio>
                                     </div>
                                     <div class="song-info card-col-center">
-                                        <h2 class="playful">Info</h2>
+                                        <h3 class="playful">Info</h3>
                                         <p class="sans"><b>Title:</b> Rewind</p>
                                         <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
                                         <p class="sans"><b>Present in:</b> Level 2</p>
@@ -95,11 +102,11 @@
                                 </div>
                                 <div class="song-details card-col-center">
                                     <div class="song-listen">
-                                        <h2 class="playful">Listen here</h2>
+                                        <h3 class="playful">Listen here</h3>
                                         <audio controls src="resources/audio/song/HRUE (Instrumental).mp3"></audio>
                                     </div>
                                     <div class="song-info card-col-center">
-                                        <h2 class="playful">Info</h2>
+                                        <h3 class="playful">Info</h3>
                                         <p class="sans"><b>Title:</b> HRUE (How are you, Edwin?) (Instrumental)</p>
                                         <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
                                         <p class="sans"><b>Present in:</b> Level M (Legacy)</p>
@@ -123,11 +130,11 @@
                                 </div>
                                 <div class="song-details card-col-center">
                                     <div class="song-listen">
-                                        <h2 class="playful">Listen here</h2>
+                                        <h3 class="playful">Listen here</h3>
                                         <audio controls src="resources/audio/song/Matrix and Mastery.mp3"></audio>
                                     </div>
                                     <div class="song-info card-col-center">
-                                        <h2 class="playful">Info</h2>
+                                        <h3 class="playful">Info</h3>
                                         <p class="sans"><b>Title:</b> Matrix and Mastery</p>
                                         <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
                                         <p class="sans"><b>Present in:</b> Level M, v1.1 Trailer</p>
@@ -151,12 +158,12 @@
                                 </div>
                                 <div class="song-details card-col-center">
                                     <div class="song-listen">
-                                        <h2 class="playful">Listen here</h2>
+                                        <h3 class="playful">Listen here</h3>
                                         <audio controls
                                             src="resources/audio/song/Main Menu - Matrix and Mastery.mp3"></audio>
                                     </div>
                                     <div class="song-info card-col-center">
-                                        <h2 class="playful">Info</h2>
+                                        <h3 class="playful">Info</h3>
                                         <p class="sans"><b>Title:</b> Matrix and Mastery (Main Menu)</p>
                                         <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
                                         <p class="sans"><b>Present in:</b> Main Menu</p>
@@ -180,11 +187,11 @@
                                 </div>
                                 <div class="song-details card-col-center">
                                     <div class="song-listen">
-                                        <h2 class="playful">Listen here</h2>
+                                        <h3 class="playful">Listen here</h3>
                                         <audio controls src="resources/audio/song/Stylish Mongeese.mp3"></audio>
                                     </div>
                                     <div class="song-info card-col-center">
-                                        <h2 class="playful">Info</h2>
+                                        <h3 class="playful">Info</h3>
                                         <p class="sans"><b>Title:</b> Stylish Mongeese</p>
                                         <p class="sans"><b>Artist:</b> Tuff Grigma Gaming</p>
                                         <p class="sans"><b>Present in:</b> v1.2 Trailer</p>
@@ -206,6 +213,12 @@
                 <p class="sans">Click on an asset to download it!</p>
                 <p class="sans">Note: All of the provided assets are PNGs and may load slowly.</p>
                 <img src="resources/img/mongoose_asset_alert.webp" alt="Disclaimer for use of assets">
+                <div id="category-nav-assets" class="sticky-category-nav">
+                    <button class="prev-btn">&lt;</button>
+                    <span id="current-category-assets">Category</span>
+                    <button class="next-btn">&gt;</button>
+                </div>
+
                 <div class="list-vertical asset-list">
 
 
@@ -374,6 +387,9 @@
                     <hr>
                     <a href="resources/img/assets/grass.png" download class="non-a-link" data-alt="Grass"><img
                             src="resources/img/assets/grass.png" alt="Grass"></a>
+                    <a href="resources/img/assets/banner-1.2_1.png" download class="non-a-link"
+                        data-alt="Banner 1.2 (1)"><img src="resources/img/assets/banner-1.2_1.png"
+                            alt="Banner 1.2 (1)"></a>
                 </div>
             </div>
         </div>
@@ -381,15 +397,7 @@
 
     </div>
 
-    <script>
-        function switchTab(tab) {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
-            document.getElementById('view-' + tab).classList.add('active');
-            document.getElementById('tab-' + tab).classList.add('active');
-        }
-    </script>
 </body>
 
 </html>
