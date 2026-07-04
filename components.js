@@ -3,13 +3,13 @@ function loadHeader() {
     setFavicon();
     const headerHTML = `
     <div class="top-banner" id="announcement">
-        <img src="resources/img/gameicon.webp" alt="Game Icon">
-        <p>Check out the updated <a href="assets.html">OST & Assets</a> page!</p>
+        <p>v1.3 is out! Check out the <a href="news.html">changelog</a> for more info!</p>
         <button class="close-banner" onclick="dismissBanner()">X</button>
     </div>
     <div class="navbar comic-sans">
         <div class="left">
             <a href="index.html" class="enabled" id="link-index">Home</a>
+            <a href="about.html" class="enabled" id="link-about">About</a>
             <a href="speedruns.html" class="enabled" id="link-speedruns">Speedruns</a>
             <a href="assets.html" class="enabled" id="link-assets">OST & Assets</a>
             <a href="news.html" class="enabled" id="link-news">News</a>
@@ -32,7 +32,8 @@ function loadHeader() {
         "speedruns.html": "link-speedruns",
         "assets.html": "link-assets",
         "news.html": "link-news",
-        "play.html": "link-play"
+        "play.html": "link-play",
+        "about.html": "link-about"
     };
 
     const currentLinkId = linkMap[page];
@@ -66,8 +67,8 @@ function initTheme() {
     applyTheme(saved, false);
 
     const container = document.querySelector('.container');
-    const firstH1 = container && container.querySelector('h1');
-    if (firstH1) {
+    const firstElement = container && container.firstElementChild;
+    if (firstElement) {
         const placeholder = document.createElement('div');
         placeholder.id = 'theme-toggle-placeholder';
         placeholder.innerHTML = `
@@ -78,9 +79,13 @@ function initTheme() {
                 <option value="mongoose_2">Style and Selection Launch Theme (John Mop)</option>
                 <option value="mongoose_3">Style and Selection Launch Theme (Jane)</option>
                 <option value="level_1">Mongooseland (Level 1) Theme</option>
+                <option value="motl_1">Mongoose on the Loose! Launch Theme (Mongeese)</option>
+                <option value="corp_dark">Corporate Dark Theme</option>
+                <option value="corp_light">Corporate Light Theme</option>
+                <option value="contrast_dark">High Contrast Dark Theme</option>
             </select>
         `;
-        container.insertBefore(placeholder, firstH1);
+        container.insertBefore(placeholder, firstElement);
         document.getElementById('theme-select').value = saved;
     }
 }
@@ -116,7 +121,7 @@ function loadFooter() {
     footer.innerHTML = `
         <p>For your feedback and fan-mail:</p>
         <h3 id="email">awesomemongoosegame@gmail.com</h3>
-        <a href="meettheteam.html">Page: Meet the team!</a>
+        <a class="btn-link copy-btn" onclick="copyToClipboard('awesomemongoosegame@gmail.com', this)">Copy Email</a>
     `;
     document.body.appendChild(footer);
 }

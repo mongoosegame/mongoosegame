@@ -125,6 +125,31 @@ if (document.readyState === 'loading') {
     runScripts();
 }
 
+// theres probably a way cleaner way to do this but idk
+function copyToClipboard(text, btn) {
+    navigator.clipboard.writeText(text);
+    // use passed btn or find it from click event or default to first one
+    const copyBtn = btn || (window.event && window.event.target ? window.event.target.closest('.copy-btn') : null) || document.querySelector('.copy-btn');
+
+    if (!copyBtn) return;
+
+    if (copyBtn.dataset.copyTimeout) {
+        clearTimeout(Number(copyBtn.dataset.copyTimeout));
+    } else {
+        copyBtn.dataset.originalText = copyBtn.innerText;
+    }
+
+    copyBtn.innerText = 'Copied!';
+
+    const timeoutId = setTimeout(() => {
+        copyBtn.innerText = copyBtn.dataset.originalText;
+        delete copyBtn.dataset.copyTimeout;
+    }, 1000);
+
+    copyBtn.dataset.copyTimeout = timeoutId;
+}
+
+
 function runScripts() {
     initImageZoom();
 
