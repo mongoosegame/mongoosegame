@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Marck+Script&family=Margarine&family=McLaren&family=Playwrite+IE:wght@100..400&family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Marck+Script&family=Margarine&family=McLaren&family=Playwrite+IE:wght@100..400&family=Quintessential&display=swap');
 
 :root,
 [data-theme="default"] {
@@ -359,6 +359,110 @@
     --nav-link-hover-bg-scale: 85% 85%;
     --color-play-btn-text: #ffffff;
     --color-ui-border: transparent;
+}
+
+[data-theme="desert"] {
+    --color-bg-solid: #2d1810;
+    --color-bg-pattern: none;
+    --bg-pattern-repeat: no-repeat;
+    --bg-pattern-position: center center;
+    --bg-pattern-size: 100vw 100vh;
+    --color-body-bg-rotation: 0deg;
+    --bg-pattern-opacity: 1;
+    --color-container-bg: #edd3a8;
+    --color-section-bg: #854823;
+    --color-category-bg: #f5e2c4;
+    --color-banner-bg: #d96b27;
+    --color-banner-text: #ffffff;
+    --color-banner-border: #4d230b;
+    --color-navbar-mobile-bg: #854823;
+    --color-activelink-bg: #f5e2c4;
+    --color-activelink-play: #ff9138;
+    --color-play-btn-bg: #d9531e;
+    --color-play-btn-shadow: #3b1607;
+    --color-play-btn-hover-bg: #3b1607;
+    --color-play-btn-hover-text: #ffffff;
+    --color-play-btn-hover-glow: #ff9138;
+    --color-section-heading: #ffffff;
+    --color-link: #852f00;
+    --bg-link: transparent;
+    --color-link-hover-text: #d9531e;
+    --color-link-hover-bg: transparent;
+    --color-selection-text: #ffffff;
+    --color-selection-bg: #854823;
+    --color-disabled-btn-bg: #59392b;
+    --color-disabled-btn-text: #8c6e61;
+    --color-game-wrapper-bg: #4d230b;
+    --color-game-border: #f5e2c4;
+    --color-close-btn-bg: #3b1607;
+    --color-close-btn-text: #ffffff;
+    --color-close-btn-border: #f5e2c4;
+    --color-close-btn-hover-bg: #f5e2c4;
+    --color-close-btn-hover-text: #3b1607;
+    --color-close-btn-hover-border: #3b1607;
+    --color-navbar-link-bg: rgba(255, 255, 255, 0.85);
+    --color-navbar-link-text: #2d1810;
+    --color-play-text-shadow: #3b1607;
+    --navbar-bg: #5e2c11;
+    --navbar-bg-hover: #ffffff;
+    --color-btn-hue-rotate: 160deg;
+    --color-text-body: #2d1810;
+    --nav-link-hover-bg: url(resources/img/assets/camel_straight.png);
+    --nav-link-hover-bg-scale: 85% 85%;
+    --color-play-btn-text: #ffffff;
+    --color-ui-border: transparent;
+}
+
+[data-theme="dessert"] {
+    --color-bg-solid: #ffb5d5;
+    --color-bg-pattern: none;
+    --bg-pattern-repeat: repeat;
+    --bg-pattern-position: center center;
+    --bg-pattern-size: auto;
+    --color-body-bg-rotation: 0deg;
+    --bg-pattern-opacity: 1;
+    --color-container-bg: #7ec0ee;
+    --color-section-bg: #ff85b3;
+    --color-category-bg: #ffc2df;
+    --color-banner-bg: #ff4d94;
+    --color-banner-text: #ffffff;
+    --color-banner-border: #ffffff;
+    --color-navbar-mobile-bg: #ff85b3;
+    --color-activelink-bg: #ffc2df;
+    --color-activelink-play: #ffffff;
+    --color-play-btn-bg: #ff1a75;
+    --color-play-btn-shadow: #80003b;
+    --color-play-btn-hover-bg: #ffffff;
+    --color-play-btn-hover-text: #ff1a75;
+    --color-play-btn-hover-glow: #ff99c2;
+    --color-section-heading: #000;
+    --color-link: #b30047;
+    --bg-link: transparent;
+    --color-link-hover-text: #ffffff;
+    --color-link-hover-bg: #ff4d94;
+    --color-selection-text: #ffffff;
+    --color-selection-bg: #ff1a75;
+    --color-disabled-btn-bg: #e6a8c2;
+    --color-disabled-btn-text: #ffffff;
+    --color-game-wrapper-bg: #7ec0ee;
+    --color-game-border: #ffffff;
+    --color-close-btn-bg: #ff1a75;
+    --color-close-btn-text: #ffffff;
+    --color-close-btn-border: #ffffff;
+    --color-close-btn-hover-bg: #ffffff;
+    --color-close-btn-hover-text: #ff1a75;
+    --color-close-btn-hover-border: #ff1a75;
+    --color-navbar-link-bg: rgba(255, 255, 255, 0.9);
+    --color-navbar-link-text: #b30047;
+    --color-play-text-shadow: rgba(128, 0, 59, 0.6);
+    --navbar-bg: #ff4d94;
+    --navbar-bg-hover: #ffffff;
+    --color-btn-hue-rotate: 300deg;
+    --color-text-body: #330014;
+    --nav-link-hover-bg: none;
+    --nav-link-hover-bg-scale: 85% 85%;
+    --color-play-btn-text: #ffffff;
+    --color-ui-border: #ffffff;
 }
 
 [data-theme="corp_dark"] {
@@ -1591,6 +1695,22 @@ img {
     background-color: var(--color-category-bg);
 }
 
+#link-archives {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    padding: 0.25rem 1rem;
+    width: fit-content;
+}
+
+#link-archives img {
+    height: 100%;
+    max-height: 1.5em;
+    width: auto;
+    object-fit: contain;
+}
+
 @media (max-width: 900px) {
 
     .container {
@@ -1656,11 +1776,30 @@ img {
         position: relative;
     }
 
-    .navbar .left,
-    .navbar .right {
+    .navbar .left {
         flex-direction: column;
         width: 100%;
         gap: 0.25rem;
+    }
+
+    .navbar .right {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 0.5rem;
+
+        * {
+            width: 100%;
+        }
+
+        #link-archives {
+            height: 100%;
+            max-height: none;
+            padding: 1rem;
+            min-width: initial;
+        }
     }
 
     .navbar a {

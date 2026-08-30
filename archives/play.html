@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mongoose Archives</title>
+</head>
+
+
+<body>
+    <div id="header-placeholder"></div>
+    <div class="container">
+        <h1>Welcome to the Mongoose Archives</h1>
+        <h2>Play</h2>
+        <p>Here you can play old versions of The Awesome Mongoose Game right in your browser.</p>
+        <nav>
+            <a href="versions.html">View all versions</a>
+            <a href="timeline.html">View timeline</a>
+            <a href="play.html" class="active-link">Play</a>
+            <a href="../index.html">Back to home</a>
+        </nav>
+
+        <nav>
+            <button class="btn-link active-tab" data-version="1.2" id="play-1.2-tab">Version 1.2</button>
+            <button class="btn-link" data-version="1.3" id="play-1.3-tab">Version 1.3</button>
+        </nav>
+        <div class="section">
+            <p><b>Notes:</b></p>
+            <p>Web versions below 1.3 are not suitable for mobile devices.</p>
+            <p>Sorry for the lack of versions below 1.2! Their links would not embed</p>
+        </div>
+        <div class="game-wrappers">
+            <div class="game-wrapper" id="play-1.2-wrapper">
+                <iframe frameborder="0" src="https://itch.io/embed-upload/17179631?color=ff71ed"
+                    data-src="https://itch.io/embed-upload/17179631?color=ff71ed" allowfullscreen=""><a
+                        href="https://profwhizz.itch.io/tamg">Play The Awesome Mongoose Game on
+                        itch.io</a></iframe>
+            </div>
+            <div class="game-wrapper" id="play-1.3-wrapper" style="display: none;">
+                <iframe frameborder="0" src="" data-src="https://itch.io/embed-upload/18193696?color=ff71ed"
+                    allowfullscreen=""><a href="https://profwhizz.itch.io/tamg">Play The Awesome Mongoose Game on
+                        itch.io</a></iframe>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

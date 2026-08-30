@@ -16,6 +16,8 @@ function loadHeader() {
         </div>
         <div class="right">
             <a href="play.html" id="link-play" class="play papyrus enabled">Play</a>
+            <a href="archives/versions.html" id="link-archives" class="play papyrus enabled"><img
+                    src="resources/img/vault.webp" alt="Archives vault"></a>
         </div>
     </div>
     `;
@@ -33,7 +35,8 @@ function loadHeader() {
         "assets.html": "link-assets",
         "news.html": "link-news",
         "play.html": "link-play",
-        "about.html": "link-about"
+        "about.html": "link-about",
+        "archives/versions.html": "link-archives"
     };
 
     const currentLinkId = linkMap[page];
@@ -80,6 +83,8 @@ function initTheme() {
                 <option value="mongoose_3">Style and Selection Launch Theme (Jane)</option>
                 <option value="level_1">Mongooseland (Level 1) Theme</option>
                 <option value="motl_1">Mongoose on the Loose! Launch Theme (Mongeese)</option>
+                <option value="desert">Deserts and Desserts Launch Theme (Desert)</option>
+                <option value="dessert">Deserts and Desserts Launch Theme (Dessert)</option>
                 <option value="corp_dark">Corporate Dark Theme</option>
                 <option value="corp_light">Corporate Light Theme</option>
                 <option value="contrast_dark">High Contrast Dark Theme</option>
