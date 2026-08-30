@@ -3,7 +3,7 @@ function loadHeader() {
     setFavicon();
     const headerHTML = `
     <div class="top-banner" id="announcement">
-        <p>v1.3 is out! Check out the <a href="news.html">changelog</a> for more info!</p>
+        <p>v1.4 is out! Check out the <a href="news.html">changelog</a> for more info!</p>
         <button class="close-banner" onclick="dismissBanner()">X</button>
     </div>
     <div class="navbar comic-sans">
